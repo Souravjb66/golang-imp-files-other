@@ -1,0 +1,18 @@
+<script>
+        document.getElementById("b1").addEventListener("click",call)
+        async function call(){
+            try{
+                const first=await fetch("http://127.0.0.1:8080/getprac")
+                const j1=await first.json()
+                document.getElementById("h1").innerText=JSON.stringify(j1.Date)
+                console.log(j1.Name)
+
+            }
+            catch(err){
+                console.log(err)
+            }
+           
+
+
+        }
+    </script>
